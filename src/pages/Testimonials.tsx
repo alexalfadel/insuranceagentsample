@@ -389,14 +389,14 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
               whileHover={{ scale: 1.02 }}
               className="flex-shrink-0 snap-center w-[calc(50%-16px)] md:w-[calc(33.333%-21.333px)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900 opacity-90"></div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 min-h-[400px] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="relative z-10">
                 <Quote className="h-16 w-16 text-blue-300 mx-auto mb-8" aria-hidden="true" />
                 <AnimatedSection animation="fadeUp" delay={0.2}>
                   <blockquote className="text-2xl font-light leading-relaxed mb-8 italic">
                     "This is exactly what insurance should be - personal service from someone who actually 
                     cares about protecting your family. The peace of mind is worth everything."
-                  </blockquote>
+              <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow mb-4 relative z-10 line-clamp-6">
                 </AnimatedSection>
                 <div className="flex justify-center mb-6">
                   {renderStars(5)}
