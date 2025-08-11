@@ -40,42 +40,42 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
       name: 'Sarah Chen',
       location: 'San Mateo, CA',
       rating: 5,
-      text: 'Outstanding service from start to finish! When I moved to San Mateo, I needed new insurance quickly. The agent took time to understand my needs and found me better coverage at a lower price than my previous provider. Highly recommend for anyone looking for personal lines insurance in San Mateo.'
+      text: 'Outstanding service from start to finish! When I moved to San Mateo, I needed new insurance quickly. The agent took time to understand my needs and found me better coverage at a lower price than my previous provider.'
     },
     {
       id: '2',
       name: 'Michael Rodriguez',
       location: 'Burlingame, CA',
       rating: 5,
-      text: 'As a first-time homeowner in the Bay Area, I was overwhelmed by insurance options. The personalized approach made all the difference - explaining earthquake coverage, liability limits, and helping me understand what I actually needed. Great local knowledge of California requirements.'
+      text: 'As a first-time homeowner in the Bay Area, I was overwhelmed by insurance options. The personalized approach made all the difference - explaining earthquake coverage, liability limits, and helping me understand what I actually needed.'
     },
     {
       id: '3',
       name: 'Jennifer Liu',
       location: 'Foster City, CA',
       rating: 5,
-      text: 'Been working with this agent for over 5 years now. What sets them apart is the ongoing relationship - not just selling a policy and disappearing. When I had a claim last year, they walked me through everything and made sure I got fair treatment. True peace of mind.'
+      text: 'Been working with this agent for over 5 years now. What sets them apart is the ongoing relationship - not just selling a policy and disappearing. When I had a claim last year, they walked me through everything.'
     },
     {
       id: '4',
       name: 'David Thompson',
       location: 'Redwood City, CA',
       rating: 5,
-      text: 'Switched our family\'s auto and home insurance here three years ago and couldn\'t be happier. The agent really understands the unique challenges of Bay Area living - from earthquake coverage to high-value home protection. Excellent service and competitive rates.'
+      text: 'Switched our family\'s auto and home insurance here three years ago and couldn\'t be happier. The agent really understands the unique challenges of Bay Area living - from earthquake coverage to high-value home protection.'
     },
     {
       id: '5',
       name: 'Maria Gonzalez',
       location: 'San Mateo, CA',
       rating: 5,
-      text: 'Professional, knowledgeable, and genuinely cares about clients. When my son started driving, they helped me understand all the options for young driver coverage and found ways to keep our premiums reasonable. Local expertise you can trust.'
+      text: 'Professional, knowledgeable, and genuinely cares about clients. When my son started driving, they helped me understand all the options for young driver coverage and found ways to keep our premiums reasonable.'
     },
     {
       id: '6',
       name: 'James Park',
       location: 'Belmont, CA',
       rating: 5,
-      text: 'Exceptional claims support when we had water damage last spring. The agent was proactive, checking in throughout the process and ensuring we got everything we were entitled to. This is how insurance should work - with an advocate on your side.'
+      text: 'Exceptional claims support when we had water damage last spring. The agent was proactive, checking in throughout the process and ensuring we got everything we were entitled to. This is how insurance should work.'
     }
   ];
 
@@ -221,7 +221,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                           {renderStars(testimonial.rating)}
                         </div>
 
-                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow overflow-y-auto mb-4 relative z-10">
+                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
                           "{testimonial.text}"
                         </blockquote>
 
