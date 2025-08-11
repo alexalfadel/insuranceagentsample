@@ -214,7 +214,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                       delay={index * 0.1}
                       className="h-full"
                     >
-                      <div className="bg-white border border-gray-200 rounded-2xl p-8 h-[320px] md:h-[280px] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-white border border-gray-200 rounded-2xl p-8 h-80 md:h-[25rem] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
                         <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100 opacity-50" aria-hidden="true" />
                         
                         <div className="mb-4 relative z-10">
