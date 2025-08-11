@@ -82,32 +82,17 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
   // Auto-scroll carousel effect
   useEffect(() => {
     if (isPaused) return;
-
     const cardsToAdvance = isDesktop ? 2 : 1;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         const maxIndex = testimonials.length - cardsToAdvance;
-        const nextIndex = prevIndex >= maxIndex ? 0 : prevIndex + cardsToAdvance;
-        
-        // Scroll to the next testimonial
-        if (carouselRef.current) {
-          const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-          const gap = 24; // space-x-6
-          const scrollPosition = nextIndex * (cardWidth + gap);
-          
-          carouselRef.current.scrollTo({
-            left: scrollPosition,
-            behavior: 'smooth'
-          });
-        }
-        
-        return nextIndex;
+        return prevIndex >= maxIndex ? 0 : prevIndex + cardsToAdvance;
       });
-    }, 3000); // 3 seconds per slide
+    }, 4000); // 4 seconds per slide
 
     return () => clearInterval(interval);
-  }, [isPaused, testimonials.length, isDesktop]);
+  }, [isPaused, isDesktop, testimonials.length]);
 
   const renderStars = (rating: number) => {
     return (
@@ -206,64 +191,66 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             </p>
           </AnimatedSection>
 
-          <div className="relative overflow-hidden">
-            <div 
-              ref={carouselRef}
-              className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory gap-6 w-full"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <AnimatedSection
-                  key={testimonial.id}
-                  animation="fadeUp"
-                  delay={index * 0.1}
-                  className="flex-shrink-0 snap-center w-full md:w-[calc(50%-12px)]"
-                >
-                  <div className="bg-white border border-gray-200 rounded-2xl p-8 relative h-80 flex flex-col">
-                    <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100" aria-hidden="true" />
-                    
-                    <div className="mb-4">
-                      {renderStars(testimonial.rating)}
-                    </div>
+          <div className="relative w-full">
+            {/* Viewport Container - Fixed width window that shows only 1-2 cards */}
+            <div className="overflow-hidden mx-auto max-w-full">
+              {/* Scrollable Container - This is wider than viewport and scrolls */}
+              <div 
+                ref={carouselRef}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / (isDesktop ? 2 : 1))}%)`
+                }}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div
+                    key={testimonial.id}
+                    className="w-full md:w-1/2 flex-shrink-0 px-3"
+                  >
+                    <AnimatedSection
+                      animation="fadeUp"
+                      delay={index * 0.1}
+                      className="h-full"
+                    >
+                      <div className="bg-white border border-gray-200 rounded-2xl p-8 h-[320px] md:h-[280px] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100 opacity-50" aria-hidden="true" />
+                        
+                        <div className="mb-4 relative z-10">
+                          {renderStars(testimonial.rating)}
+                        </div>
 
-                    <blockquote className="text-gray-700 text-base leading-relaxed flex-grow overflow-hidden">
-                      <p className="line-clamp-4">"{testimonial.text}"</p>
-                    </blockquote>
+                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow overflow-y-auto mb-4 relative z-10">
+                          "{testimonial.text}"
+                        </blockquote>
 
-                    <div className="border-t border-gray-100 pt-4 mt-4">
-                      <AnimatedSection animation="scale" delay={index * 0.1 + 0.2}>
-                        <cite className="not-italic">
-                          <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                          <div className="text-sm text-gray-600">{testimonial.location}</div>
-                        </cite>
-                      </AnimatedSection>
-                    </div>
+                        <div className="border-t border-gray-100 pt-4 mt-auto relative z-10">
+                          <cite className="not-italic">
+                            <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                            <div className="text-sm text-gray-600">{testimonial.location}</div>
+                          </cite>
+                        </div>
+                      </div>
+                    </AnimatedSection>
                   </div>
-                </AnimatedSection>
-              ))}
+                ))}
+              </div>
             </div>
+
             {/* Navigation Arrows */}
             <button
               onClick={() => {
                 const cardsToAdvance = isDesktop ? 2 : 1;
-                const newIndex = Math.max(0, currentIndex - cardsToAdvance);
-                setCurrentIndex(newIndex);
-                if (carouselRef.current) {
-                  const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-                  const gap = 24; // space-x-6
-                  const scrollPosition = newIndex * (cardWidth + gap);
-                  carouselRef.current.scrollTo({
-                    left: scrollPosition,
-                    behavior: 'smooth'
-                  });
-                }
+                setCurrentIndex(prev => Math.max(0, prev - cardsToAdvance));
               }}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-700 z-10"
+              disabled={currentIndex === 0}
+              className={`absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 z-20 transition-all duration-200 ${
+                currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
               aria-label="Previous testimonials"
             >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -272,22 +259,15 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
               onClick={() => {
                 const cardsToAdvance = isDesktop ? 2 : 1;
                 const maxIndex = testimonials.length - cardsToAdvance;
-                const newIndex = Math.min(maxIndex, currentIndex + cardsToAdvance);
-                setCurrentIndex(newIndex);
-                if (carouselRef.current) {
-                  const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-                  const gap = 24; // space-x-6
-                  const scrollPosition = newIndex * (cardWidth + gap);
-                  carouselRef.current.scrollTo({
-                    left: scrollPosition,
-                    behavior: 'smooth'
-                  });
-                }
+                setCurrentIndex(prev => Math.min(maxIndex, prev + cardsToAdvance));
               }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-700 z-10"
+              disabled={currentIndex >= testimonials.length - (isDesktop ? 2 : 1)}
+              className={`absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 z-20 transition-all duration-200 ${
+                currentIndex >= testimonials.length - (isDesktop ? 2 : 1) ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
               aria-label="Next testimonials"
             >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -295,32 +275,19 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
           
           {/* Carousel indicators */}
           <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => {
-              const cardsToAdvance = isDesktop ? 2 : 1;
-              
-              // Only show indicators for the start of each group
-              if (index % cardsToAdvance !== 0) return null;
-              
+            {Array.from({ length: Math.ceil(testimonials.length / (isDesktop ? 2 : 1)) }).map((_, index) => {
+              const groupIndex = index * (isDesktop ? 2 : 1);
               return (
-              <button
-                key={index}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  if (carouselRef.current) {
-                    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-                    const gap = 24; // space-x-6
-                    const scrollPosition = index * (cardWidth + gap);
-                    carouselRef.current.scrollTo({
-                      left: scrollPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 ${
-                  Math.floor(currentIndex / cardsToAdvance) === Math.floor(index / cardsToAdvance) ? 'bg-blue-700' : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(groupIndex)}
+                  className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                    Math.floor(currentIndex / (isDesktop ? 2 : 1)) === index 
+                      ? 'w-8 bg-blue-600' 
+                      : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to testimonial group ${index + 1}`}
+                />
               );
             })}
           </div>
