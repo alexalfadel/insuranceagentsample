@@ -206,10 +206,10 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             </p>
           </AnimatedSection>
 
-          <div className="relative">
+          <div className="relative overflow-x-hidden">
             <div 
             ref={carouselRef}
-            className="flex overflow-x-hidden snap-x snap-mandatory space-x-6 w-full"
+            className="flex overflow-x-scroll snap-x snap-mandatory space-x-6 w-full"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
