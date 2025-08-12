@@ -215,21 +215,23 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                       className="h-full"
                     >
                       <div className="bg-white border border-gray-200 rounded-2xl p-2 md:p-8 h-[24rem] md:h-[25rem] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
-                        <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100 opacity-50" aria-hidden="true" />
-                        
-                        <div className="mb-4 relative z-10">
-                          {renderStars(testimonial.rating)}
-                        </div>
+                        <div className="md:bg-white md:border md:border-gray-200 md:rounded-2xl p-2 md:p-8 h-[24rem] md:h-[25rem] flex flex-col md:shadow-sm hover:md:shadow-lg transition-shadow duration-300 relative">
+                          <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100 opacity-50" aria-hidden="true" />
+                          
+                          <div className="mb-4 relative z-10">
+                            {renderStars(testimonial.rating)}
+                          </div>
 
-                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
-                          "{testimonial.text}"
-                        </blockquote>
+                          <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
+                            "{testimonial.text}"
+                          </blockquote>
 
-                        <div className="border-t border-gray-100 pt-4 mt-auto relative z-10">
-                          <cite className="not-italic">
-                            <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                            <div className="text-sm text-gray-600">{testimonial.location}</div>
-                          </cite>
+                          <div className="border-t border-gray-100 pt-4 mt-auto relative z-10">
+                            <cite className="not-italic">
+                              <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                              <div className="text-sm text-gray-600">{testimonial.location}</div>
+                            </cite>
+                          </div>
                         </div>
                       </div>
                     </AnimatedSection>
