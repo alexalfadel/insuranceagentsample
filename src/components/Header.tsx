@@ -125,7 +125,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             <div className="pt-4 border-t border-gray-200">
               <motion.a
                 href="tel:+16505551234"
-                className="flex items-center space-x-2 px-4 py-3 text-blue-700 hover:text-blue-800 hover:bg-gray-50 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700"
+                className="flex items-center space-x-2 px-4 py-3 text-blue-700 hover:text-blue-800 hover:bg-gray-50 rounded-md transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none"
                 aria-label="Call us at 650-555-1234"
                 whileHover={{ x: 5 }}
                 whileTap={{ scale: 0.98 }}
