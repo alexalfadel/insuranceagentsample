@@ -215,7 +215,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                       className="h-full"
                     >
                       <div className="bg-white rounded-2xl p-8 md:p-10 h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100">
-                        <Quote className="absolute top-4 right-4 md:top-6 md:right-6 h-6 w-6 md:h-8 md:w-8 text-blue-100 opacity-50" aria-hidden="true" />
+                        <Quote className="absolute top-4 right-4 md:top-6 md:right-6 h-6 w-6 md:h-8 md:w-8 text-blue-400 opacity-75" aria-hidden="true" />
                         
                         {/* Top section - Stars */}
                         <div className="relative z-10 mb-4 flex-shrink-0">
