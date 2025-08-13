@@ -197,7 +197,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
                     <p className="text-gray-600 text-sm">{service.description}</p>
                 </motion.div>
-              </AnimatedSection>
             ))}
           </div>
 
