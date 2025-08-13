@@ -71,7 +71,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   </motion.button>
                   <motion.a
                   href="tel:+16505551234"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700 flex items-center justify-center space-x-2"
+                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700 flex items-center justify-center space-x-2 cursor-pointer"
                   aria-label="Call us at 650-555-1234"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -191,12 +191,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div 
-                    className="bg-blue-700 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-800 transition-colors duration-200"
-                    whileHover={{ rotate: 10 }}
                   >
                   <Shield className="h-6 w-6 text-white" aria-hidden="true" />
                   </motion.div>
-                  <div className="flex-1">
+                 </a>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
                     <p className="text-gray-600 text-sm">{service.description}</p>
                   </div>
