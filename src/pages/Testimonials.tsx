@@ -214,17 +214,20 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                       delay={index * 0.1}
                       className="h-full"
                     >
-                      <div className="bg-white border border-gray-200 rounded-2xl p-2 md:p-8 h-[24rem] md:h-[25rem] flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300 relative">
-                        <Quote className="absolute top-6 right-6 h-8 w-8 text-blue-100 opacity-50" aria-hidden="true" />
+                      <div className="bg-white rounded-2xl p-4 md:p-8 h-[24rem] md:h-[25rem] flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100">
+                        <Quote className="absolute top-4 right-4 md:top-6 md:right-6 h-6 w-6 md:h-8 md:w-8 text-blue-100 opacity-50" aria-hidden="true" />
                         
-                        <div className="mb-4 relative z-10">
+                        {/* Top section - Stars */}
+                        <div className="relative z-10">
                           {renderStars(testimonial.rating)}
                         </div>
 
-                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
+                        {/* Middle section - Quote (takes available space) */}
+                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 py-4">
                           "{testimonial.text}"
                         </blockquote>
 
+                        {/* Bottom section - Author info */}
                         <div className="border-t border-gray-100 pt-4 mt-auto relative z-10">
                           <cite className="not-italic">
                             <div className="font-semibold text-gray-900">{testimonial.name}</div>
