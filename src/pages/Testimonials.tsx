@@ -441,7 +441,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 onClick={() => onNavigate('contact')}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:outline-none active:outline-none"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -449,7 +449,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
               </motion.button>
               <motion.a
                 href="tel:+16505551234"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-gray-100 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-gray-100 focus:outline-none focus-visible:outline-none active:outline-none"
                 aria-label="Call us at 650-555-1234"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
