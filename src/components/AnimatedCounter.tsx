@@ -31,8 +31,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (calculatedDuration * 1000), 1);
       
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(startCount + (end - startCount) * easeOutQuart);
+      // Use linear easing for consistent speed throughout animation
+      const currentCount = progress === 1 ? end : Math.floor(startCount + (end - startCount) * progress);
       
       setCount(currentCount);
 
