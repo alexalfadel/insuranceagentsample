@@ -190,7 +190,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   whileHover={{ y: -5, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <motion.div>
+                  <motion.div className="bg-blue-700 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                     <Shield className="h-6 w-6 text-white" aria-hidden="true" />
                   </motion.div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
