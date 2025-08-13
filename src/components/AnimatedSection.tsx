@@ -58,7 +58,6 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
         delay,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}
-      {...(typeof children === 'object' && 'props' in children ? children.props : {})}
     >
       {children}
     </motion.div>
