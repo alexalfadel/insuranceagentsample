@@ -206,12 +206,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </div>
 
           <AnimatedSection animation="scale" className="text-center">
-            <button
-              onClick={() => onNavigate('services')}
-              className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-xl focus:outline-none focus-visible:outline-none active:outline-none focus:ring-0 w-1/2 mx-auto block cursor-pointer hover:bg-blue-800 transition-colors duration-200"
-            >
-              View All Services
-            </button>
+            <div className="group">
+              <button
+                onClick={() => onNavigate('services')}
+                className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-xl focus:outline-none focus-visible:outline-none active:outline-none focus:ring-0 w-1/2 mx-auto block cursor-pointer hover:bg-blue-800 group-hover:bg-blue-800 transition-colors duration-200"
+              >
+                View All Services
+              </button>
+            </div>
           </AnimatedSection>
         </div>
       </section>
