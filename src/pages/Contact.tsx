@@ -53,7 +53,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 transition={{ duration: 0.3 }}
               >
                 <AnimatedSection animation="scale" delay={0.2}>
-                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-shrink-0">
+                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-none">
                     <Phone className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                 </AnimatedSection>
@@ -78,7 +78,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 transition={{ duration: 0.3 }}
               >
                 <AnimatedSection animation="scale" delay={0.3}>
-                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-shrink-0">
+                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-none">
                     <Mail className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                 </AnimatedSection>
@@ -103,7 +103,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 transition={{ duration: 0.3 }}
               >
                 <AnimatedSection animation="scale" delay={0.4}>
-                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-shrink-0">
+                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-none">
                     <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                 </AnimatedSection>
@@ -120,7 +120,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 transition={{ duration: 0.3 }}
               >
                 <AnimatedSection animation="scale" delay={0.5}>
-                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-shrink-0">
+                  <div className="bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 flex-none">
                     <Clock className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                 </AnimatedSection>
