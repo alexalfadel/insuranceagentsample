@@ -11,12 +11,15 @@ interface AnimatedCounterProps {
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
-  duration = 2,
+  duration,
   suffix = '',
   className = ''
 }) => {
   const [count, setCount] = useState(0);
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.5 });
+
+  // Calculate dynamic duration based on the end value if not provided
+  const calculatedDuration = duration || Math.max(1.5, Math.min(3, end / 500));
 
   useEffect(() => {
     if (!isVisible) return;
@@ -26,7 +29,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+      const progress = Math.min((currentTime - startTime) / (calculatedDuration * 1000), 1);
       
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(startCount + (end - startCount) * easeOutQuart);
@@ -39,7 +42,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     };
 
     requestAnimationFrame(animate);
-  }, [isVisible, end, duration]);
+  }, [isVisible, end, calculatedDuration]);
 
   return (
     <motion.div

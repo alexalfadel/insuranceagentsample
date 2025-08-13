@@ -161,7 +161,10 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             </AnimatedSection>
             <AnimatedSection animation="fadeUp" delay={0.3}>
               <div>
-                <div className="text-4xl font-bold text-blue-700 mb-2">4.9</div>
+                <AnimatedCounter 
+                  end={4.9} 
+                  className="text-4xl font-bold text-blue-700 mb-2"
+                />
                 <div className="text-gray-600 font-medium">Average Rating</div>
               </div>
             </AnimatedSection>
