@@ -194,7 +194,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   >
                   <Shield className="h-6 w-6 text-white" aria-hidden="true" />
                   </motion.div>
-                 </a>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
                     <p className="text-gray-600 text-sm">{service.description}</p>
                   </div>
