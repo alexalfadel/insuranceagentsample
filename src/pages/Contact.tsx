@@ -60,7 +60,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
                 <motion.a
                   href="tel:+16505551234"
-                  className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 rounded px-2 py-1"
+                  className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none rounded px-2 py-1"
                   aria-label="Call us at 650-555-1234"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
@@ -85,7 +85,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
                 <motion.a
                   href="mailto:agent@sanmateoinsurance.com"
-                  className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 rounded px-2 py-1 text-sm break-all"
+                  className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none rounded px-2 py-1 text-sm break-all"
                   aria-label="Email us at agent@sanmateoinsurance.com"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
