@@ -6,6 +6,8 @@ import AnimatedSection from '../components/AnimatedSection';
 import ParallaxImage from '../components/ParallaxImage';
 import AnimatedCounter from '../components/AnimatedCounter';
 import { useParallax } from '../hooks/useScrollAnimation';
+import headshot1 from '../assets/headshot1.png'
+import headshot2 from '../assets/headshot2.png'
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -35,14 +37,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
-                  Protecting What Matters Most in
+                  Protecting What
                   <motion.span 
                     className="text-blue-300 block"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   >
-                    San Mateo
+                    Matters Most
                   </motion.span>
                 </motion.h1>
                 <motion.p 
@@ -90,7 +92,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                   <ParallaxImage
-                    src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src={headshot2}
                     alt="Professional insurance agent helping a family"
                     className="w-full h-80 rounded-lg shadow-2xl"
                     parallaxSpeed={0}
@@ -174,10 +176,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {[
-              { title: 'Auto Insurance', description: 'San Mateo CA auto coverage' },
-              { title: 'Home Insurance', description: 'Protect your San Mateo home' },
-              { title: 'Renters Insurance', description: 'Affordable renters coverage' },
-              { title: 'Umbrella Insurance', description: 'Extra liability protection' }
+              { title: 'Auto Insurance', description: 'Personal car coverage for individuals and families.' },
+              { title: 'Home Insurance', description: 'Protect your most valuable asset, your home.' },
+              { title: 'Renters Insurance', description: 'Affordable renters coverage across the Bay Area, CA.' },
+              { title: 'Umbrella Insurance', description: 'Extra liability protection for any and all needs.' }
             ].map((service, index) => (
               <AnimatedSection
                 key={index}

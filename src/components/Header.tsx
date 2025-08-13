@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           >
             <Shield className="h-8 w-8 text-blue-700" aria-hidden="true" />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">San Mateo Insurance</h1>
+              <h1 className="text-xl font-bold text-gray-900">Ethan Li Insurance</h1>
               <p className="text-sm text-gray-600">Personal Lines Agent</p>
             </div>
           </motion.div>

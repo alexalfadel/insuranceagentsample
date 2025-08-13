@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import ParallaxImage from '../components/ParallaxImage';
 import { useParallax } from '../hooks/useScrollAnimation';
+import officeImg from '../assets/office.png'
+import familyImg from '../assets/family.png'
 
 interface AboutProps {
   onNavigate: (page: string) => void;
@@ -29,12 +31,12 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
           <div className="text-center">
             <AnimatedSection animation="fadeUp" delay={0.2}>
               <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                About Your San Mateo Insurance Agent
+                About Ethan Li Insurance
               </h1>
             </AnimatedSection>
             <AnimatedSection animation="fadeUp" delay={0.4}>
               <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-                With over 15 years of experience serving San Mateo and the Bay Area, I'm dedicated to 
+                With over 15 years of experience serving San Mateo and the surrounding Bay Area, I'm dedicated to 
                 protecting what matters most to you and your family with personalized insurance solutions.
               </p>
             </AnimatedSection>
@@ -49,21 +51,21 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeRight" delay={0.2}>
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                  Our Story
+                  My Story
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  I started my insurance career with a simple mission: to provide San Mateo families 
+                  I started my insurance career with a simple mission: to provide local families 
                   with the personal attention and expert guidance they deserve when protecting their 
                   most valuable assets.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Having lived in the Bay Area for over two decades, I understand the unique challenges 
-                  our community faces – from earthquake risks to high property values. This local 
+                  our community faces - from earthquake risks to high property values. This local 
                   knowledge, combined with my commitment to exceptional service, has helped me build 
                   lasting relationships with over 1,200 families across San Mateo County.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  When you work with me, you're not just getting an insurance policy – you're gaining 
+                  When you work with me, you're not just getting an insurance policy, you're gaining 
                   a trusted advisor who will be there for you when you need it most.
                 </p>
               </div>
@@ -71,8 +73,8 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeLeft" delay={0.4}>
               <div className="relative">
                 <ParallaxImage
-                  src="https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Professional insurance agent in San Mateo office"
+                  src={officeImg}
+                  alt="Professional insurance agent Ethan Li in San Mateo office"
                   className="w-full h-96 rounded-2xl shadow-2xl"
                   parallaxSpeed={0}
                 />
@@ -175,7 +177,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeRight" delay={0.2}>
               <div className="relative">
                 <ParallaxImage
-                  src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={familyImg}
                   alt="Insurance agent portrait"
                   className="w-full h-96 rounded-2xl shadow-2xl"
                   parallaxSpeed={0}
@@ -185,7 +187,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeLeft" delay={0.4}>
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                  Meet Your Agent
+                  Meet Your Ethan Li
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   As a licensed insurance professional with deep roots in San Mateo, I bring both 
@@ -274,7 +276,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  agent@sanmateoinsurance.com
+                  ethan@ethanliinsurance.com
                 </motion.a>
               </motion.div>
             </AnimatedSection>
