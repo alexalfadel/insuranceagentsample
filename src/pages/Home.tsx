@@ -93,7 +93,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Professional insurance agent helping a family"
                     className="w-full h-80 rounded-lg shadow-2xl"
-                    parallaxSpeed={0.2}
+                    parallaxSpeed={0}
                   />
                 </motion.div>
               </div>
