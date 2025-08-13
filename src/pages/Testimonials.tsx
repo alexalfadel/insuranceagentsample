@@ -192,12 +192,12 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
           </AnimatedSection>
 
           <div className="relative w-full">
-            {/* Viewport Container - Fixed width window that shows only 1-2 cards */}
-            <div className="overflow-hidden mx-auto max-w-full">
+            {/* Viewport Container - Fixed height to prevent cut-off */}
+            <div className="overflow-hidden mx-auto max-w-full" style={{ height: '400px' }}>
               {/* Scrollable Container - This is wider than viewport and scrolls */}
               <div 
                 ref={carouselRef}
-                className="flex transition-transform duration-500 ease-in-out items-stretch"
+                className="flex transition-transform duration-500 ease-in-out h-full"
                 style={{
                   transform: `translateX(-${currentIndex * (100 / (isDesktop ? 2 : 1))}%)`
                 }}
@@ -207,31 +207,31 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={testimonial.id}
-                    className="w-full md:w-1/2 flex-shrink-0 px-3"
+                    className="w-full md:w-1/2 flex-shrink-0 px-3 h-full"
                   >
                     <AnimatedSection
                       animation="fadeUp"
                       delay={index * 0.1}
                       className="h-full"
                     >
-                      <div className="bg-white rounded-2xl p-4 md:p-8 min-h-[20rem] flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100 h-full">
+                      <div className="bg-white rounded-2xl p-6 md:p-8 h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100">
                         <Quote className="absolute top-4 right-4 md:top-6 md:right-6 h-6 w-6 md:h-8 md:w-8 text-blue-100 opacity-50" aria-hidden="true" />
                         
                         {/* Top section - Stars */}
-                        <div className="relative z-10 mb-4">
+                        <div className="relative z-10 mb-4 flex-shrink-0">
                           {renderStars(testimonial.rating)}
                         </div>
 
                         {/* Middle section - Quote (takes available space) */}
-                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
-                          "{testimonial.text}"
+                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6 overflow-hidden">
+                          <p className="line-clamp-6">"{testimonial.text}"</p>
                         </blockquote>
 
                         {/* Bottom section - Author info */}
-                        <div className="border-t border-gray-100 pt-4 mt-auto relative z-10">
+                        <div className="border-t border-gray-100 pt-4 relative z-10 flex-shrink-0">
                           <cite className="not-italic">
-                            <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                            <div className="text-sm text-gray-600">{testimonial.location}</div>
+                            <div className="font-semibold text-gray-900 text-sm md:text-base">{testimonial.name}</div>
+                            <div className="text-xs md:text-sm text-gray-600">{testimonial.location}</div>
                           </cite>
                         </div>
                       </div>
