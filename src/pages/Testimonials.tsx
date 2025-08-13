@@ -242,18 +242,22 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
             </div>
 
             {/* Navigation Arrows */}
+          </div>
+          
+          {/* Navigation Arrows - Positioned to sides of carousel */}
+          <div className="flex justify-between items-center mt-6">
             <button
               onClick={() => {
                 const cardsToAdvance = isDesktop ? 2 : 1;
                 setCurrentIndex(prev => Math.max(0, prev - cardsToAdvance));
               }}
               disabled={currentIndex === 0}
-              className={`absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 z-20 transition-all duration-200 ${
+              className={`bg-white shadow-md rounded-full p-2 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${
                 currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
               }`}
               aria-label="Previous testimonials"
             >
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -265,19 +269,19 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                 setCurrentIndex(prev => Math.min(maxIndex, prev + cardsToAdvance));
               }}
               disabled={currentIndex >= testimonials.length - (isDesktop ? 2 : 1)}
-              className={`absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 z-20 transition-all duration-200 ${
+              className={`bg-white shadow-md rounded-full p-2 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${
                 currentIndex >= testimonials.length - (isDesktop ? 2 : 1) ? 'opacity-50 cursor-not-allowed' : ''
               }`}
               aria-label="Next testimonials"
             >
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
           
           {/* Carousel indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 space-x-2">
             {Array.from({ length: Math.ceil(testimonials.length / (isDesktop ? 2 : 1)) }).map((_, index) => {
               const groupIndex = index * (isDesktop ? 2 : 1);
               return (
