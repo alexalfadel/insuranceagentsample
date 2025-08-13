@@ -206,14 +206,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </div>
 
           <AnimatedSection animation="scale" className="text-center">
-            <motion.button
+            <button
               onClick={() => onNavigate('services')}
-              className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-xl transition-all duration-200 focus:outline-none focus-visible:outline-none active:outline-none focus:ring-0 w-1/2 mx-auto block"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
+              className="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-xl focus:outline-none focus-visible:outline-none active:outline-none focus:ring-0 w-1/2 mx-auto block cursor-pointer hover:bg-blue-800 transition-colors duration-200"
             >
               View All Services
-            </motion.button>
+            </button>
           </AnimatedSection>
         </div>
       </section>
