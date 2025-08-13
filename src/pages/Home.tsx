@@ -243,7 +243,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </motion.button>
               <motion.a
               href="tel:+16505551234"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none cursor-pointer"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none active:outline-none focus-visible:outline-none"
               aria-label="Call us at 650-555-1234"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
