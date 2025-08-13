@@ -65,9 +65,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-50 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700 flex items-center justify-center space-x-2"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                >
-                  <span>Get Free Quote</span>
-                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                  >
+                    <span>Get Free Quote</span>
+                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </motion.button>
                   <motion.a
                   href="tel:+16505551234"
@@ -75,9 +75,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   aria-label="Call us at 650-555-1234"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                >
-                  <PhoneCall className="h-5 w-5" aria-hidden="true" />
-                  <span>(650) 555-1234</span>
+                  >
+                    <PhoneCall className="h-5 w-5" aria-hidden="true" />
+                    <span>(650) 555-1234</span>
                   </motion.a>
                 </motion.div>
               </div>
@@ -113,14 +113,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
                 >
-                <Shield className="h-8 w-8 text-white" aria-hidden="true" />
+                  <Shield className="h-8 w-8 text-white" aria-hidden="true" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900">
                   <AnimatedCounter end={15} suffix="+ Years Experience" />
                 </h3>
-              <p className="text-gray-600">
-                Serving San Mateo and the Bay Area with expert knowledge of local insurance needs.
-              </p>
+                <p className="text-gray-600">
+                  Serving San Mateo and the Bay Area with expert knowledge of local insurance needs.
+                </p>
               </div>
             </AnimatedSection>
             <AnimatedSection animation="fadeUp" delay={0.2}>
@@ -130,14 +130,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
                 >
-                <Users className="h-8 w-8 text-white" aria-hidden="true" />
+                  <Users className="h-8 w-8 text-white" aria-hidden="true" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900">
                   <AnimatedCounter end={1200} suffix="+ Families Protected" />
                 </h3>
-              <p className="text-gray-600">
-                Trusted by families across San Mateo, Burlingame, Foster City, and Redwood City.
-              </p>
+                <p className="text-gray-600">
+                  Trusted by families across San Mateo, Burlingame, Foster City, and Redwood City.
+                </p>
               </div>
             </AnimatedSection>
             <AnimatedSection animation="fadeUp" delay={0.3}>
@@ -147,12 +147,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.3 }}
                 >
-                <Award className="h-8 w-8 text-white" aria-hidden="true" />
+                  <Award className="h-8 w-8 text-white" aria-hidden="true" />
                 </motion.div>
-              <h3 className="text-xl font-semibold text-gray-900">Top-Rated Agent</h3>
-              <p className="text-gray-600">
-                Consistently rated 5 stars for exceptional service and personalized attention.
-              </p>
+                <h3 className="text-xl font-semibold text-gray-900">Top-Rated Agent</h3>
+                <p className="text-gray-600">
+                  Consistently rated 5 stars for exceptional service and personalized attention.
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -190,13 +190,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   whileHover={{ y: -5, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <motion.div 
-                  >
-                  <Shield className="h-6 w-6 text-white" aria-hidden="true" />
+                  <motion.div>
+                    <Shield className="h-6 w-6 text-white" aria-hidden="true" />
                   </motion.div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600 text-sm">{service.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
                 </motion.div>
+              </AnimatedSection>
             ))}
           </div>
 
@@ -238,8 +238,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-50 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700 cursor-pointer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-            >
-              Get Your Free Quote
+              >
+                Get Your Free Quote
               </motion.button>
               <motion.a
               href="tel:+16505551234"
@@ -247,8 +247,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               aria-label="Call us at 650-555-1234"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-            >
-              Call (650) 555-1234
+              >
+                Call (650) 555-1234
               </motion.a>
             </div>
           </AnimatedSection>
