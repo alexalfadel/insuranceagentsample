@@ -207,7 +207,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={testimonial.id}
-                    className="w-full md:w-1/2 flex-shrink-0 px-3 h-full"
+                    className="w-full md:w-1/2 flex-shrink-0 px-3 h-full mb-4"
                   >
                     <AnimatedSection
                       animation="fadeUp"
