@@ -179,15 +179,15 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-16 bg-red-50 border-t-4 border-red-400">
+      <section className="py-16 bg-blue-50 border-t-4 border-blue-400">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection animation="fadeUp">
-            <h3 className="text-2xl font-bold text-red-900 mb-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">
               Need to Report a Claim?
             </h3>
           </AnimatedSection>
           <AnimatedSection animation="fadeUp" delay={0.2}>
-            <p className="text-red-800 mb-6">
+            <p className="text-blue-800 mb-6">
               If you need to report a claim or have an emergency, please call your insurance company's 
               24-hour claims hotline first, then contact me so I can assist you through the process.
             </p>
@@ -196,7 +196,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
                 href="tel:+16505551234"
-                className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-red-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 aria-label="Call for claims assistance at 650-555-1234"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
