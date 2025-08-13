@@ -25,7 +25,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
   // Detect screen size for responsive behavior
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsDesktop(window.innerWidth >= 768); // md breakpoint
+      setIsDesktop(window.innerWidth >= 1024); // lg breakpoint
     };
     
     checkScreenSize();
@@ -82,7 +82,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
   // Auto-scroll carousel effect
   useEffect(() => {
     if (isPaused) return;
-    const cardsToAdvance = isDesktop ? 2 : 1;
+    const cardsToAdvance = isDesktop ? 2 : 1; // Always 1 for mobile/tablet, 2 for desktop
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
@@ -207,7 +207,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={testimonial.id}
-                    className="w-full md:w-1/2 flex-shrink-0 px-3 h-full mb-4"
+                    className="w-full lg:w-1/2 flex-shrink-0 px-3 h-full mb-4"
                   >
                     <AnimatedSection
                       animation="fadeUp"
