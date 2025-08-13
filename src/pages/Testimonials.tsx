@@ -197,7 +197,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
               {/* Scrollable Container - This is wider than viewport and scrolls */}
               <div 
                 ref={carouselRef}
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out items-stretch"
                 style={{
                   transform: `translateX(-${currentIndex * (100 / (isDesktop ? 2 : 1))}%)`
                 }}
@@ -214,16 +214,16 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                       delay={index * 0.1}
                       className="h-full"
                     >
-                      <div className="bg-white rounded-2xl p-4 md:p-8 h-[24rem] md:h-[25rem] flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100">
+                      <div className="bg-white rounded-2xl p-4 md:p-8 min-h-[20rem] flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-gray-100 h-full">
                         <Quote className="absolute top-4 right-4 md:top-6 md:right-6 h-6 w-6 md:h-8 md:w-8 text-blue-100 opacity-50" aria-hidden="true" />
                         
                         {/* Top section - Stars */}
-                        <div className="relative z-10">
+                        <div className="relative z-10 mb-4">
                           {renderStars(testimonial.rating)}
                         </div>
 
                         {/* Middle section - Quote (takes available space) */}
-                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 py-4">
+                        <blockquote className="text-gray-700 text-sm md:text-base leading-relaxed flex-grow relative z-10 mb-6">
                           "{testimonial.text}"
                         </blockquote>
 
