@@ -293,8 +293,8 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                   </div>
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Me</h3>
-                <p className="text-gray-700 font-medium">San Mateo, CA</p>
-                <p className="text-sm text-gray-600 mt-1">Serving all of San Mateo County</p>
+                <p className="font-medium text-blue-700">123 Main St, San Mateo, CA</p>
+                {/* <p className="text-sm text-gray-600 mt-1">Serving all of San Mateo County</p> */}
               </motion.div>
             </AnimatedSection>
           </div>
