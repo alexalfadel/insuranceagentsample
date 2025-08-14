@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </a>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                <span>San Mateo, CA</span>
+                <span>123 Main St, San Mateo, CA</span>
               </div>
             </div>
           </div>
