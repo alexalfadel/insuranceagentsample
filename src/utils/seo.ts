@@ -2,12 +2,12 @@ import { SEOData } from '../types';
 
 export const seoData: Record<string, SEOData> = {
   home: {
-    title: "San Mateo Insurance Agent | Personal Lines Coverage | Auto & Home Insurance CA",
+    title: "Ethan Li Insurance | Personal Lines Coverage | Auto & Home Insurance CA",
     description: "Your trusted personal lines insurance agent in San Mateo, CA. Protecting what matters most – your home, car, and family – with affordable, customized coverage.",
     keywords: ["San Mateo insurance agent", "personal lines insurance San Mateo", "auto insurance San Mateo CA", "home insurance San Mateo CA"]
   },
   about: {
-    title: "About Your San Mateo Insurance Agent | Personal Story & Mission",
+    title: "About Your Ethan Li Insurance | Personal Story & Mission",
     description: "Meet your dedicated San Mateo insurance agent with 15+ years of experience protecting Bay Area families. Learn about our mission, values, and commitment to personalized service.",
     keywords: ["San Mateo insurance agent", "about insurance agent", "Bay Area insurance expert", "personal insurance story", "local agent mission"]
   },
