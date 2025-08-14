@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           <div className="hidden md:flex items-center space-x-4">
             <motion.a
               href="tel:+16504651676"
-              className="flex items-center space-x-2 text-blue-700 hover:text-blue-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 rounded px-2 py-1"
+              className="flex items-center space-x-2 text-blue-700 hover:text-blue-800 transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none rounded px-2 py-1"
               aria-label="Call us at 650-465-1676"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
