@@ -108,7 +108,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                   </div>
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-                <p className="text-gray-700 font-medium">San Mateo, CA</p>
+                <p className="text-blue-700 font-medium">123 Main St, San Mateo, CA</p>
                 <p className="text-sm text-gray-600 mt-2">Serving all of the Bay Area</p>
               </motion.div>
             </AnimatedSection>
