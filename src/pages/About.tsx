@@ -246,13 +246,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Me</h3>
                 <motion.a
-                  href="tel:+16505551234"
+                  href="tel:+16504651676"
                   className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none rounded px-2 py-1"
-                  aria-label="Call us at 650-555-1234"
+                  aria-label="Call us at 650-465-1676"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  (650) 555-1234
+                  (650) 465-1676
                 </motion.a>
               </motion.div>
             </AnimatedSection>
@@ -270,13 +270,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Me</h3>
                 <motion.a
-                  href="mailto:agent@sanmateoinsurance.com"
+                  href="mailto:alex@xelaweb.dev"
                   className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none rounded px-2 py-1 text-sm break-all"
-                  aria-label="Email us at agent@sanmateoinsurance.com"
+                  aria-label="Email us at ethan@ethanli.com"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  ethan@ethanliinsurance.com
+                  ethan@ethanli.com
                 </motion.a>
               </motion.div>
             </AnimatedSection>
@@ -331,13 +331,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </motion.button>
               <motion.a
-                href="tel:+16505551234"
+                href="tel:+16504651676"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:outline-none active:outline-none"
-                aria-label="Call us at 650-555-1234"
+                aria-label="Call us at 650-465-1676"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Call (650) 555-1234
+                Call (650) 465-1676
               </motion.a>
             </div>
           </AnimatedSection>

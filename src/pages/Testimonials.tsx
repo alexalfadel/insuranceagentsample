@@ -40,42 +40,42 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
       name: 'Sarah Chen',
       location: 'San Mateo, CA',
       rating: 5,
-      text: 'Outstanding service from start to finish! When I moved to San Mateo, I needed new insurance quickly. The agent took time to understand my needs and found me better coverage at a lower price than my previous provider.'
+      text: 'Outstanding service from start to finish! When I moved to San Mateo, I needed new insurance quickly. Ethan took time to understand my needs and found me better coverage at a lower price than my previous provider.'
     },
     {
       id: '2',
       name: 'Michael Rodriguez',
       location: 'Burlingame, CA',
       rating: 5,
-      text: 'As a first-time homeowner in the Bay Area, I was overwhelmed by insurance options. The personalized approach made all the difference - explaining earthquake coverage, liability limits, and helping me understand what I actually needed.'
+      text: 'As a first-time homeowner in the Bay Area, I was overwhelmed by insurance options. The personalized approach made all the difference, explaining earthquake coverage, liability limits, and helping me understand what I actually needed.'
     },
     {
       id: '3',
       name: 'Jennifer Liu',
       location: 'Foster City, CA',
       rating: 5,
-      text: 'Been working with this agent for over 5 years now. What sets them apart is the ongoing relationship - not just selling a policy and disappearing. When I had a claim last year, they walked me through everything.'
+      text: 'Been working with Ethan for over 5 years now. What sets him apart is the ongoing relationship,  not just selling a policy and disappearing. When I had a claim last year, he walked me through everything.'
     },
     {
       id: '4',
       name: 'David Thompson',
       location: 'Redwood City, CA',
       rating: 5,
-      text: 'Switched our family\'s auto and home insurance here three years ago and couldn\'t be happier. The agent really understands the unique challenges of Bay Area living - from earthquake coverage to high-value home protection.'
+      text: 'Switched our family\'s auto and home insurance here three years ago and couldn\'t be happier. Ethan really understands the unique challenges of Bay Area living, from earthquake coverage to high-value home protection.'
     },
     {
       id: '5',
       name: 'Maria Gonzalez',
       location: 'San Mateo, CA',
       rating: 5,
-      text: 'Professional, knowledgeable, and genuinely cares about clients. When my son started driving, they helped me understand all the options for young driver coverage and found ways to keep our premiums reasonable.'
+      text: 'Professional, knowledgeable, and genuinely cares about clients. When my son started driving, he helped me understand all the options for young driver coverage and found ways to keep our premiums reasonable.'
     },
     {
       id: '6',
       name: 'James Park',
       location: 'Belmont, CA',
       rating: 5,
-      text: 'Exceptional claims support when we had water damage last spring. The agent was proactive, checking in throughout the process and ensuring we got everything we were entitled to. This is how insurance should work.'
+      text: 'Exceptional claims support when we had water damage last spring. Ethan was proactive, checking in throughout the process and ensuring we got everything we were entitled to. This is how insurance should work.'
     }
   ];
 
@@ -448,13 +448,13 @@ const Testimonials: React.FC<TestimonialsProps> = ({ onNavigate }) => {
                 Get Your Free Quote
               </motion.button>
               <motion.a
-                href="tel:+16505551234"
+                href="tel:+16504651676"
                 className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-gray-100 focus:outline-none focus-visible:outline-none active:outline-none"
-                aria-label="Call us at 650-555-1234"
+                aria-label="Call us at 650-465-1676"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Call (650) 555-1234
+                Call (650) 465-1676
               </motion.a>
             </div>
           </AnimatedSection>

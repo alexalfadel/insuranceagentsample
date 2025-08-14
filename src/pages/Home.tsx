@@ -72,14 +72,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </motion.button>
                   <motion.a
-                  href="tel:+16505551234"
+                  href="tel:+16504651676"
                    className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none cursor-pointer flex items-center justify-center space-x-2"
-                  aria-label="Call us at 650-555-1234"
+                  aria-label="Call us at 650-465-1676"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <PhoneCall className="h-5 w-5" aria-hidden="true" />
-                    <span>(650) 555-1234</span>
+                    <span>(650) 465-1676</span>
                   </motion.a>
                 </motion.div>
               </div>
@@ -244,13 +244,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 Get Your Free Quote
               </motion.button>
               <motion.a
-              href="tel:+16505551234"
+              href="tel:+16504651676"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 hover:bg-blue-500 focus:outline-none active:outline-none focus-visible:outline-none"
-              aria-label="Call us at 650-555-1234"
+              aria-label="Call us at 650-465-1676"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Call (650) 555-1234
+                Call (650) 465-1676
               </motion.a>
             </div>
           </AnimatedSection>

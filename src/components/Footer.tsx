@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="flex items-center space-x-3">
               <Shield className="h-8 w-8 text-blue-400" aria-hidden="true" />
               <div>
-                <h3 className="text-xl font-bold">San Mateo Insurance</h3>
+                <h3 className="text-xl font-bold">Ethan Li Insurance</h3>
                 <p className="text-gray-300 text-sm">Personal Lines Agent</p>
               </div>
             </div>
@@ -53,20 +53,20 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <a
-                href="tel:+16505551234"
+                href="tel:+16504651676"
                 className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none"
-                aria-label="Call us at 650-555-1234"
+                aria-label="Call us at 650-465-1676"
               >
                 <Phone className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                <span>(650) 555-1234</span>
+                <span>(650) 465-1676</span>
               </a>
               <a
-                href="mailto:agent@sanmateoinsurance.com"
+                href="mailto:alex@xelaweb.dev"
                 className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none"
-                aria-label="Email us at agent@sanmateoinsurance.com"
+                aria-label="Email us at ethan@ethanli.com"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                <span>agent@sanmateoinsurance.com</span>
+                <span>ethan@ethanli.com</span>
               </a>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-lg font-semibold mb-4">Business Hours</h4>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                {/* <Clock className="h-4 w-4 flex-shrink-0" aria-hidden="true" /> */}
                 <div>
                   <p className="text-sm">Mon - Fri: 9:00 AM - 6:00 PM</p>
                   <p className="text-sm">Sat: 9:00 AM - 2:00 PM</p>
@@ -93,15 +93,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} San Mateo Insurance. All rights reserved.
+              © {new Date().getFullYear()} Ethan Li Insurance. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors duration-200 focus:outline-none">
+              {/* <a href="#" className="hover:text-white transition-colors duration-200 focus:outline-none">
                 Privacy Policy
               </a>
               <a href="#" className="hover:text-white transition-colors duration-200 focus:outline-none">
                 Terms of Service
-              </a>
+              </a> */}
+              <a href='https://xelaweb.dev/' target='_blank' className='hover:text-white'>Designed & Developed by Xela Web</a>
             </div>
           </div>
         </div>

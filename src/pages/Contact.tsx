@@ -35,7 +35,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeUp" delay={0.4}>
               <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
                 Request your free insurance quote today. Call, email, or fill out the form – 
-                I'm here to help you find the right coverage in San Mateo, CA.
+                I'm here to help you find the right coverage.
               </p>
             </AnimatedSection>
           </div>
@@ -59,13 +59,13 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
                 <motion.a
-                  href="tel:+16505551234"
+                  href="tel:+16504651676"
                   className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none rounded px-2 py-1"
-                  aria-label="Call us at 650-555-1234"
+                  aria-label="Call us at 650-465-1676"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  (650) 555-1234
+                  (650) 465-1676
                 </motion.a>
                 <p className="text-sm text-gray-600 mt-2">Mon-Fri: 9AM-6PM</p>
               </motion.div>
@@ -84,13 +84,13 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
                 <motion.a
-                  href="mailto:agent@sanmateoinsurance.com"
+                  href="mailto:alex@xelaweb.dev"
                   className="text-blue-700 hover:text-blue-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:outline-none active:outline-none rounded px-2 py-1 text-sm break-all"
-                  aria-label="Email us at agent@sanmateoinsurance.com"
+                  aria-label="Email us at ethan@ethanlicom"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  agent@sanmateoinsurance.com
+                  ethan@ethanli.com
                 </motion.a>
                 <p className="text-sm text-gray-600 mt-2">24-hour response</p>
               </motion.div>
@@ -109,7 +109,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 </AnimatedSection>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
                 <p className="text-gray-700 font-medium">San Mateo, CA</p>
-                <p className="text-sm text-gray-600 mt-2">Serving all of San Mateo County</p>
+                <p className="text-sm text-gray-600 mt-2">Serving all of the Bay Area</p>
               </motion.div>
             </AnimatedSection>
 
@@ -195,9 +195,9 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
           <AnimatedSection animation="fadeUp" delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:+16505551234"
+                href="tel:+16504651676"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-blue-700 hover:scale-105 focus:outline-none focus-visible:outline-none active:outline-none"
-                aria-label="Call for claims assistance at 650-555-1234"
+                aria-label="Call for claims assistance at 650-465-1676"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
