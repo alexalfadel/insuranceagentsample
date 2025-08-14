@@ -187,7 +187,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <AnimatedSection animation="fadeLeft" delay={0.4}>
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                  Meet Your Ethan Li
+                  Meet Ethan Li
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   As a licensed insurance professional with deep roots in San Mateo, I bring both 
